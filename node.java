@@ -4,7 +4,7 @@ public class node
 {
     private int traffic; //thte traffic intensity will vary dynamically
     private final int distance; //the distance is fixed and is expressed in metres
-    private final int tvertex;  //indicates the terminal vertex
+    private int tvertex;  //indicates the terminal vertex
     private double speed;  //measure of how fast will it take to reach this node
     private node next;
 

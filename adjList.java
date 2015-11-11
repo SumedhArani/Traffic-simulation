@@ -24,8 +24,25 @@ public class adjList
 		    p=p.getNext();
 		p.setNext(temp);
 	    }
+
+	node p1;
+        p1=list[j];
+        node temp1 = new node(weight,i);
+        if(p1==null)
+            list[j]=temp1;
+        else
+            {
+                while(p1.getNext()!=null)
+                    p1=p1.getNext();
+                p1.setNext(temp1);
+            }
     }
 
+    public int vertexCount()
+    {
+	return vertices+1;
+    }
+    
     public void deleteEdge(int i, int weight, int j)
     {
 	node p =list[i];
