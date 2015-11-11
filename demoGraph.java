@@ -8,16 +8,13 @@ public class demoGraph
 	a1.insertEdge(1,300,3);
 	a1.insertEdge(2,400,4);
 	a1.insertEdge(3,200,4);
-	a1.insertEdge(4,600,5);
-	a1.display();
-	dijkstra(a1, 2);
+	dijkstra(a1, 2, 4);
     }
     
-    static void dijkstra(adjList a1,int source)
+    static void dijkstra(adjList a1,int source, int dest)
     {
 	pQueue pq = new pQueue(a1.vertexCount());
-	int w;
-	element v;
+	element v= new element(source, 0);
 	int[] distance =new int[a1.vertexCount()];
 	int[] path =new int[a1.vertexCount()];
 
@@ -29,7 +26,7 @@ public class demoGraph
 	    }
 	distance[source]=0;
 
-	while(!pq.isEmpty())
+	while(!pq.isEmpty())// && v.getVertex()!=3)
 	    {
 		v =pq.getMin();
 		int pvertex= v.getVertex();
@@ -52,7 +49,19 @@ public class demoGraph
 			temp =temp.getNext();
 		    }
 	    }
-	System.out.println(Arrays.toString(path));
+	//example destination is 3
+	int index=0;
+	for(int i=0; i<dest+1;i++)
+	    {
+		if (path[i]==source)
+		    index =i;
+	    }
+	for(int j=index;j<dest+1;j++)
+	    {
+		if(path[j]!=0)
+		    System.out.print(path[j]+"-->");
+	    }
+	System.out.println(dest);
     }
 
 }
