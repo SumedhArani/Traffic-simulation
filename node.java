@@ -4,23 +4,26 @@ public class node
 {
     private int traffic; //thte traffic intensity will vary dynamically
     private final int distance; //the distance is fixed and is expressed in metres
-    private final node tvertex;  //indicates the terminal vertex
+    private final int tvertex;  //indicates the terminal vertex
     private double speed;  //measure of how fast will it take to reach this node
+    private node next;
 
-    public node(int distance, int traffic, node tvertex) //constructor
+    public node(int distance, int traffic, int tvertex) //constructor
     {
 	this.traffic =traffic;
 	this.distance =distance;
 	this.speed = distance/traffic;
 	this.tvertex =tvertex;
+	this.next=null;
     }
 
-    public node(int distance, node tvertex) //constructor
+    public node(int distance, int tvertex) //constructor
     {
 	this.tvertex =tvertex;
 	this.distance = distance;
 	this.traffic =1; //default light traffic; 1-light; 2-moderate; 3-heavy
 	this.speed =distance;
+	this.next=null;
     }
 
     public int getTraffic() //getter method
@@ -33,9 +36,19 @@ public class node
 	return this.distance;
     }
 
-    public node getTvertex()
+    public int getTvertex()
     {
 	return tvertex;
+    }
+
+    public node getNext()
+    {
+	return this.next;
+    }
+
+    public void setNext(node n)
+    {
+	this.next =n;
     }
 
     public void setTraffic(int t)
