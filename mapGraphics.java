@@ -87,6 +87,14 @@ class mapGraphics extends Canvas
                   if(color.equals("RED")) g.setColor(Color.RED);
                   if(color.equals("YLW")) g.setColor(Color.YELLOW);
                   if(color.equals("GRN")) g.setColor(Color.GREEN);
+                  if(color.equals("CYN")) g.setColor(Color.CYAN);
+                  if(color.equals("DGR")) g.setColor(Color.DARK_GRAY);
+                  if(color.equals("GRY")) g.setColor(Color.GRAY);
+                  if(color.equals("LGR")) g.setColor(Color.LIGHT_GRAY);
+                  if(color.equals("MGT")) g.setColor(Color.MAGENTA);
+                  if(color.equals("ORG")) g.setColor(Color.ORANGE);
+                  if(color.equals("PNK")) g.setColor(Color.PINK);
+                  if(color.equals("WHT")) g.setColor(Color.WHITE);
 
                   x = ((int)str.charAt(7) -48)*100 + ((int)str.charAt(8) -48)*10 + ((int)str.charAt(9) -48) ;
                   y = ((int)str.charAt(11) -48)*100 + ((int)str.charAt(12) -48)*10 + ((int)str.charAt(13) -48) ;   
@@ -110,6 +118,15 @@ class mapGraphics extends Canvas
                   if(color.equals("RED")) g.setColor(Color.RED);
                   if(color.equals("YLW")) g.setColor(Color.YELLOW);
                   if(color.equals("GRN")) g.setColor(Color.GREEN);
+                  if(color.equals("CYN")) g.setColor(Color.CYAN);
+                  if(color.equals("DGR")) g.setColor(Color.DARK_GRAY);
+                  if(color.equals("GRY")) g.setColor(Color.GRAY);
+                  if(color.equals("LGR")) g.setColor(Color.LIGHT_GRAY);
+                  if(color.equals("MGT")) g.setColor(Color.MAGENTA);
+                  if(color.equals("ORG")) g.setColor(Color.ORANGE);
+                  if(color.equals("PNK")) g.setColor(Color.PINK);
+                  if(color.equals("WHT")) g.setColor(Color.WHITE);
+
 
                   x1 = ((int)str.charAt(5) -48)*100 + ((int)str.charAt(6) -48)*10 + ((int)str.charAt(7) -48) ;
                   y1 = ((int)str.charAt(9) -48)*100 + ((int)str.charAt(10) -48)*10 + ((int)str.charAt(11) -48) ;   
@@ -137,6 +154,15 @@ class mapGraphics extends Canvas
                   if(color.equals("RED")) g.setColor(Color.RED);
                   if(color.equals("YLW")) g.setColor(Color.YELLOW);
                   if(color.equals("GRN")) g.setColor(Color.GREEN);
+                  if(color.equals("CYN")) g.setColor(Color.CYAN);
+                  if(color.equals("DGR")) g.setColor(Color.DARK_GRAY);
+                  if(color.equals("GRY")) g.setColor(Color.GRAY);
+                  if(color.equals("LGR")) g.setColor(Color.LIGHT_GRAY);
+                  if(color.equals("MGT")) g.setColor(Color.MAGENTA);
+                  if(color.equals("ORG")) g.setColor(Color.ORANGE);
+                  if(color.equals("PNK")) g.setColor(Color.PINK);
+                  if(color.equals("WHT")) g.setColor(Color.WHITE);
+
 
                   x1 = ((int)str.charAt(5) -48)*100 + ((int)str.charAt(6) -48)*10 + ((int)str.charAt(7) -48) ;
                   y1 = ((int)str.charAt(9) -48)*100 + ((int)str.charAt(10) -48)*10 + ((int)str.charAt(11) -48) ;   
@@ -162,6 +188,15 @@ class mapGraphics extends Canvas
                   if(color.equals("RED")) g.setColor(Color.RED);
                   if(color.equals("YLW")) g.setColor(Color.YELLOW);
                   if(color.equals("GRN")) g.setColor(Color.GREEN);
+                  if(color.equals("CYN")) g.setColor(Color.CYAN);
+                  if(color.equals("DGR")) g.setColor(Color.DARK_GRAY);
+                  if(color.equals("GRY")) g.setColor(Color.GRAY);
+                  if(color.equals("LGR")) g.setColor(Color.LIGHT_GRAY);
+                  if(color.equals("MGT")) g.setColor(Color.MAGENTA);
+                  if(color.equals("ORG")) g.setColor(Color.ORANGE);
+                  if(color.equals("PNK")) g.setColor(Color.PINK);
+                  if(color.equals("WHT")) g.setColor(Color.WHITE);
+
 
                   x = ((int)str.charAt(5) -48)*100 + ((int)str.charAt(6) -48)*10 + ((int)str.charAt(7) -48) ;
                   y = ((int)str.charAt(9) -48)*100 + ((int)str.charAt(10) -48)*10 + ((int)str.charAt(11) -48) ;   
