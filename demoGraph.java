@@ -3,12 +3,19 @@ public class demoGraph
 {
     public static void main(String[] args)
     {
-	adjList a1 =new adjList(5);
-	a1.insertEdge(1,100,2);
-	a1.insertEdge(1,300,3);
-	a1.insertEdge(2,400,4);
-	a1.insertEdge(3,200,4);
-	dijkstra(a1, 2, 4);
+	adjList a1 =new adjList(7);
+	a1.insertEdge(1,2,200,2);
+	a1.insertEdge(2,5,300,1);
+	a1.insertEdge(5,7,100,3);
+	a1.insertEdge(7,6,300,2);
+	a1.insertEdge(6,4,400,1);
+	a1.insertEdge(4,1,400,2);
+	a1.insertEdge(4,3,200,1);
+	a1.insertEdge(3,2,200,1);
+	a1.insertEdge(3,5,500,2);
+	a1.insertEdge(3,6,700,3);
+	a1.insertEdge(3,1,100,2);
+	dijkstra(a1, 1, 6);
     }
     
     static void dijkstra(adjList a1,int source, int dest)
@@ -26,7 +33,7 @@ public class demoGraph
 	    }
 	distance[source]=0;
 
-	while(!pq.isEmpty())// && v.getVertex()!=3)
+	while(!pq.isEmpty())
 	    {
 		v =pq.getMin();
 		int pvertex= v.getVertex();
@@ -49,19 +56,15 @@ public class demoGraph
 			temp =temp.getNext();
 		    }
 	    }
-	//example destination is 3
-	int index=0;
-	for(int i=0; i<dest+1;i++)
+
+	System.out.print(dest+"->");
+	int index =dest;
+	while(index!=source)
 	    {
-		if (path[i]==source)
-		    index =i;
+		System.out.print(path[index]+"->");
+		index =path[index];
 	    }
-	for(int j=index;j<dest+1;j++)
-	    {
-		if(path[j]!=0)
-		    System.out.print(path[j]+"-->");
-	    }
-	System.out.println(dest);
+	System.out.println("Shortest path");
     }
 
 }

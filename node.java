@@ -3,7 +3,7 @@ import java.util.*;
 public class node
 {
     private int traffic; //thte traffic intensity will vary dynamically
-    private final int distance; //the distance is fixed and is expressed in metres
+    private int distance; //the distance is fixed and is expressed in metres
     private int tvertex;  //indicates the terminal vertex
     private double speed;  //measure of how fast will it take to reach this node
     private node next;
@@ -46,6 +46,11 @@ public class node
 	return this.next;
     }
 
+    public double getSpeed()
+    {
+	return this.distance/this.traffic;
+    }
+
     public void setNext(node n)
     {
 	this.next =n;
@@ -58,6 +63,6 @@ public class node
 
     public String toString()
     {
-	return "This road has traffic intensity "+this.traffic+" and distance is "+this.distance+"m\nSpeed:"+this.speed;
+	return "This road has traffic intensity "+this.traffic+" and distance is "+this.distance+"m\nSpeed:"+getSpeed();
     }
 }
