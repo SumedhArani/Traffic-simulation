@@ -1,0 +1,32 @@
+void Dijkstra(Graph G, int source)
+{
+  PriorityQueue pq=new PriorityQueue();
+  int v, w;
+  pq.enQueue(source);
+  for(int i=0;i<G.vertexCount;i++)
+  {        
+     distance[i]=-1;
+  }
+  distance[source]=0;
+  
+  while(!pq.isEmpty())
+  {
+     v=pq.getAndDeleteVertexWithMinDist();
+     for all adjacent vertices w of v
+     {
+  Compute new distance d=distance[v]+weight[v][w];
+        if(distance[w]==-1)
+          {
+            distance[w]=d;
+            Insert w in the pq with priority d
+            path[w]=v;
+          }
+        else if(distance[w]> d)
+          {
+            distance[w]=d;
+            Update priority of vertex w to be d;
+            path[w]=v;
+	  }
+     }
+  }
+}
