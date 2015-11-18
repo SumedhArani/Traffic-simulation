@@ -4,6 +4,9 @@ import java.io.*;
 
 class trafficSimulation
 {
+
+
+
 	public static void main(String[] args)
 	{
 
@@ -75,9 +78,163 @@ class trafficSimulation
 
   System.out.print(dest+"->");
   int index =dest;
+  int x1,y1,x2,y2;
+  x1=0;
+  x2=0;
+  y1=0;
+  y2=0;
+  switch(index)
+  {
+    case 1:
+        x1=60;
+        y1=270;
+        break;
+      case 2:
+        x1=120;
+        y1=120;
+        break;
+      case 3:
+        x1=210;
+        y1=120;
+        break;
+      case 4:
+        x1=330;
+        y1=30;
+        break;
+      case 5:
+        x1=450;
+        y1=180;
+        break;
+      case 6:
+        x1=300;
+        y1=330;
+        break;
+      case 7:
+        x1=150;
+        y1=210;
+        break;
+      case 8:
+        x1=180;
+        y1=390;
+        break;
+      case 9:
+        x1=420;
+        y1=390;
+        break;
+      case 10:
+        x1=300;
+        y1=480;
+        break;
+      case 11:
+        x1=420;
+        y1=480;
+        break;
+      case 12:
+        x1=570;
+        y1=540;
+        break;
+      case 13:
+        x1=90;
+        y1=510;
+        break;
+  }
   while(index!=source)
       {
     System.out.print(path[index]+"->");
+    switch(path[index])
+    {
+      case 1:
+        x2=60;
+        y2=270;
+        line(x1,y1,x2,y2,"GRN");
+        x1=x2;
+        y1=y2;
+        break;
+      case 2:
+        x2=120;
+        y2=120;
+        line(x1,y1,x2,y2,"GRN");
+        x1=x2;
+        y1=y2;
+        break;
+      case 3:
+        x2=210;
+        y2=120;
+        line(x1,y1,x2,y2,"GRN");
+        x1=x2;
+        y1=y2;
+        break;
+      case 4:
+        x2=330;
+        y2=30;
+        line(x1,y1,x2,y2,"GRN");
+        x1=x2;
+        y1=y2;
+        break;
+      case 5:
+        x2=450;
+        y2=180;
+        line(x1,y1,x2,y2,"GRN");
+        x1=x2;
+        y1=y2;
+        break;
+      case 6:
+        x2=300;
+        y2=330;
+        line(x1,y1,x2,y2,"GRN");
+        x1=x2;
+        y1=y2;
+        break;
+      case 7:
+        x2=150;
+        y2=210;
+        line(x1,y1,x2,y2,"GRN");
+        x1=x2;
+        y1=y2;
+        break;
+      case 8:
+        x2=180;
+        y2=390;
+        line(x1,y1,x2,y2,"GRN");
+        x1=x2;
+        y1=y2;
+        break;
+      case 9:
+        x2=420;
+        y2=390;
+        line(x1,y1,x2,y2,"GRN");
+        x1=x2;
+        y1=y2;
+        break;
+      case 10:
+        x2=300;
+        y2=480;
+        line(x1,y1,x2,y2,"GRN");
+        x1=x2;
+        y1=y2;
+        break;
+      case 11:
+        x2=420;
+        y2=480;
+        line(x1,y1,x2,y2,"GRN");
+        x1=x2;
+        y1=y2;
+        break;
+      case 12:
+        x2=570;
+        y2=540;
+        line(x1,y1,x2,y2,"GRN");
+        x1=x2;
+        y1=y2;
+        break;
+      case 13:
+        x2=90;
+        y2=510;
+        line(x1,y1,x2,y2,"GRN");
+        x1=x2;
+        y1=y2;
+        break;
+    }
     index =path[index];
       }
   System.out.println("Shortest path");
@@ -126,9 +283,163 @@ class trafficSimulation
 
   System.out.print(dest+"->");
   int index =dest;
+  int x1,y1,x2,y2;
+  x1=0;
+  x2=0;
+  y1=0;
+  y2=0;
+  switch(index)
+  {
+    case 1:
+        x1=60;
+        y1=270;
+        break;
+      case 2:
+        x1=120;
+        y1=120;
+        break;
+      case 3:
+        x1=210;
+        y1=120;
+        break;
+      case 4:
+        x1=330;
+        y1=30;
+        break;
+      case 5:
+        x1=450;
+        y1=180;
+        break;
+      case 6:
+        x1=300;
+        y1=330;
+        break;
+      case 7:
+        x1=150;
+        y1=210;
+        break;
+      case 8:
+        x1=180;
+        y1=390;
+        break;
+      case 9:
+        x1=420;
+        y1=390;
+        break;
+      case 10:
+        x1=300;
+        y1=480;
+        break;
+      case 11:
+        x1=420;
+        y1=480;
+        break;
+      case 12:
+        x1=570;
+        y1=540;
+        break;
+      case 13:
+        x1=90;
+        y1=510;
+        break;
+  }
   while(index!=source)
       {
     System.out.print(path[index]+"->");
+    switch(path[index])
+    {
+      case 1:
+        x2=60;
+        y2=270;
+        line(x1,y1,x2,y2,"BLU");
+        x1=x2;
+        y1=y2;
+        break;
+      case 2:
+        x2=120;
+        y2=120;
+        line(x1,y1,x2,y2,"BLU");
+        x1=x2;
+        y1=y2;
+        break;
+      case 3:
+        x2=210;
+        y2=120;
+        line(x1,y1,x2,y2,"BLU");
+        x1=x2;
+        y1=y2;
+        break;
+      case 4:
+        x2=330;
+        y2=30;
+        line(x1,y1,x2,y2,"BLU");
+        x1=x2;
+        y1=y2;
+        break;
+      case 5:
+        x2=450;
+        y2=180;
+        line(x1,y1,x2,y2,"BLU");
+        x1=x2;
+        y1=y2;
+        break;
+      case 6:
+        x2=300;
+        y2=330;
+        line(x1,y1,x2,y2,"BLU");
+        x1=x2;
+        y1=y2;
+        break;
+      case 7:
+        x2=150;
+        y2=210;
+        line(x1,y1,x2,y2,"BLU");
+        x1=x2;
+        y1=y2;
+        break;
+      case 8:
+        x2=180;
+        y2=390;
+        line(x1,y1,x2,y2,"BLU");
+        x1=x2;
+        y1=y2;
+        break;
+      case 9:
+        x2=420;
+        y2=390;
+        line(x1,y1,x2,y2,"BLU");
+        x1=x2;
+        y1=y2;
+        break;
+      case 10:
+        x2=300;
+        y2=480;
+        line(x1,y1,x2,y2,"BLU");
+        x1=x2;
+        y1=y2;
+        break;
+      case 11:
+        x2=420;
+        y2=480;
+        line(x1,y1,x2,y2,"BLU");
+        x1=x2;
+        y1=y2;
+        break;
+      case 12:
+        x2=570;
+        y2=540;
+        line(x1,y1,x2,y2,"BLU");
+        x1=x2;
+        y1=y2;
+        break;
+      case 13:
+        x2=90;
+        y2=510;
+        line(x1,y1,x2,y2,"BLU");
+        x1=x2;
+        y1=y2;
+        break;
+    }
     index =path[index];
       }
   System.out.println("Fastest path");
