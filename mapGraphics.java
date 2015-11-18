@@ -135,6 +135,17 @@ class mapGraphics extends Canvas
 
                   System.out.println("\n"+"Line - "+x1+" "+y1+" "+x2+" "+y2+" "+color+"\n"); 
                   g.drawLine(x1, maxY-y1, x2, maxY-y2);
+                  g.drawLine(x1+1, maxY-y1, x2+1, maxY-y2);
+                  g.drawLine(x1-1, maxY-y1, x2-1, maxY-y2);
+                  g.drawLine(x1+2, maxY-y1, x2+2, maxY-y2);
+                  g.drawLine(x1-2, maxY-y1, x2-2, maxY-y2);
+                  g.drawLine(x1, maxY-y1+1, x2, maxY-y2+1);
+                  g.drawLine(x1, maxY-y1-1, x2, maxY-y2-1);
+                  g.drawLine(x1, maxY-y1+2, x2, maxY-y2+2);
+                  g.drawLine(x1, maxY-y1-2, x2, maxY-y2-2);
+                  g.drawLine(x1+1, maxY-y1+1, x2+1, maxY-y2+1);
+                  g.drawLine(x1-1, maxY-y1-1, x2-1, maxY-y2-1);
+
               }
 
 
