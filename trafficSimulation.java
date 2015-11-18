@@ -2,6 +2,26 @@ import java.util.Random;
 import java.util.Scanner;
 import java.io.*;
 
+//////////////////////
+/*
+ Color codes for objects on the graph:
+
+ Default path color : LIGHT_GRAY
+
+ Shortest path : MAGENTA
+ Fastest Path : GREEN
+
+ low Traffic : GRAY
+ moderate traffic : YELLOW
+ heavy traffic : RED
+
+ Node : Black
+
+ vehicle : BLUE
+
+*/
+
+
 class trafficSimulation
 {
 	public static void main(String[] args)
@@ -137,19 +157,19 @@ class trafficSimulation
     public static void createGraph()
     {
 
-      circle(60,270,40,"GRN");
-      circle(120,120,40,"GRN");
-      circle(150,210,40,"GRN");
-      circle(180,390,40,"GRN");
-      circle(90,510,40,"GRN");
-      circle(210,120,40,"GRN");
-      circle(300,330,40,"GRN");
-      circle(330,30,40,"GRN");
-      circle(300,480,40,"GRN");
-      circle(450,180,40,"GRN");
-      circle(420,390,40,"GRN");
-      circle(420,480,40,"GRN");
-      circle(570,540,40,"GRN");
+      circle(60,270,40,"BLK");
+      circle(120,120,40,"BLK");
+      circle(150,210,40,"BLK");
+      circle(180,390,40,"BLK");
+      circle(90,510,40,"BLK");
+      circle(210,120,40,"BLK");
+      circle(300,330,40,"BLK");
+      circle(330,30,40,"BLK");
+      circle(300,480,40,"BLK");
+      circle(450,180,40,"BLK");
+      circle(420,390,40,"BLK");
+      circle(420,480,40,"BLK");
+      circle(570,540,40,"BLK");
 
 
       line(60,270,120,120,"BLK");  //1
