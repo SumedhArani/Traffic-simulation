@@ -27,6 +27,8 @@ class trafficSimulation
     a1.insertEdge(9,12,210,3);  //16
     a1.insertEdge(11,12,150,3);  //17
     a1.insertEdge(10,11,120,2);  //18
+
+    createGraph();
   
     dijkstra(a1, 1, 12);
 
@@ -132,7 +134,6 @@ class trafficSimulation
   System.out.println("Fastest path");
     }
 
-	}
 
     public static void createGraph()
     {
@@ -175,6 +176,7 @@ class trafficSimulation
 
     }
 
+
     public static void circle(int x, int y, int r, String col )
     {
     	y = y +40; // to shift the graph by 20 pixels up
@@ -208,9 +210,6 @@ class trafficSimulation
         temp = temp +(char)((r%10)+48);
 
         temp = temp + "_" + col + "     -----Ghazz Sumedh !!";
-       
-        
-
     	
 
     	try
