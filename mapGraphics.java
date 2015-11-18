@@ -1,4 +1,3 @@
-// Graphics Program
 import java.awt.*; 
 import java.util.*;
 import java.*;
@@ -73,6 +72,8 @@ class mapGraphics extends Canvas
              
               String fig ="" +  str.charAt(0) + str.charAt(1) + str.charAt(2) + str.charAt(3);
 
+              g.setColor(Color.BLACK); //default color = BLACK
+
               
 
               if(fig.equals("CHAR") == true) /// for character 
@@ -95,7 +96,7 @@ class mapGraphics extends Canvas
               }
 
 
-              else if(fig.equals("LINE") == true) /// for rectangle 
+              else if(fig.equals("LINE") == true) /// for Line
               {
                 int x1 = 0;
                 int y1 = 0;
@@ -171,8 +172,16 @@ class mapGraphics extends Canvas
                   y = y - (int)(1.414*r);*/ 
 
                   System.out.println("\n"+"Circle - "+x+" "+y+" "+r+" "+color+"\n"); 
-                  g.drawOval(x, maxY-y, r/2, r/2);
-                  g.fillOval(x, maxY-y, r/2, r/2);
+
+                  r = r/3;
+                  x = x -r;
+                  y = maxY - (y+(int)(r*1.2));
+
+                  r = r*2;
+                  g.drawOval(x, y, r, r);
+                  g.fillOval(x, y, r, r);
+
+
               }
 
 
