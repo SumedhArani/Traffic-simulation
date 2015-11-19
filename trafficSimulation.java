@@ -576,18 +576,48 @@ class trafficSimulation
     {
 
       circle(60,270,40,"BLK");
+      character('1',60+20,270,"BLK");
+
       circle(120,120,40,"BLK");
+      character('2',120,120-20,"BLK");
+
       circle(150,210,40,"BLK");
+      character('7',150+20,210,"BLK");
+
       circle(180,390,40,"BLK");
+      character('8',180-20,390,"BLK");
+
       circle(90,510,40,"BLK");
+      character('1',90+20,510,"BLK");
+      character('3',90+25,510,"BLK");
+
       circle(210,120,40,"BLK");
+      character('3',210+20,120,"BLK");
+
       circle(300,330,40,"BLK");
+      character('6',300+20,330,"BLK");
+
       circle(330,30,40,"BLK");
+      character('4',330+20,30,"BLK");
+
       circle(300,480,40,"BLK");
+      character('1',300+20,480+20,"BLK");
+      character('0',300+25,480+20,"BLK");
+
       circle(450,180,40,"BLK");
+      character('5',450+20,180,"BLK");
+
       circle(420,390,40,"BLK");
+      character('9',420+20,390,"BLK");
+
+      
       circle(480,420,40,"BLK");
+      character('1',480+0,420-20,"BLK");
+      character('1',480+5,420-20,"BLK");
+
       circle(570,540,40,"BLK");
+      character('1',570,540-20,"BLK");
+      character('2',570+5,540-20,"BLK");
 
 
       line(60,270,120,120,"LGR");  //1
