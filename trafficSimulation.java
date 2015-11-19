@@ -52,8 +52,97 @@ class trafficSimulation
     a1.insertEdge(10,11,120,2);  //18
 
     createGraph();
+
+    Scanner s=new Scanner(System.in);
+    System.out.println("Enter the source vertex");
+    int src = s.nextInt();
+    System.out.println("Enter your dstination");
+    int des = s.nextInt();
+    int x;
+
+    while(src!=des)
+    {
+      x=getRno();
+    a1.setTraffic(1,2,x);  //1
+    line(60,270,120,120,getColor(x));
+
+     x=getRno();
+    a1.setTraffic(2,3,x);  //2
+    line(120,120,210,120,getColor(x));
+
+     x=getRno();
+    a1.setTraffic(3,4,x);  //3
+    line(210,120,330,30,getColor(x));
+
+     x=getRno();
+    a1.setTraffic(4,5,x);  //4
+    line(330,30,450,180,getColor(x));
+
+     x=getRno();
+    a1.setTraffic(5,6,x);  //5
+    line(450,180,300,330,getColor(x));
+
+     x=getRno();
+    a1.setTraffic(6,7,x);  //6
+    line(300,330,150,210,getColor(x));
+
+     x=getRno();
+    a1.setTraffic(7,8,x);  //7
+    line(150,210,180,390,getColor(x));
+
+     x=getRno();
+    a1.setTraffic(1,8,x);  //8
+    line(60,270,180,390,getColor(x));
+
+     x=getRno();
+    a1.setTraffic(2,7,x);  //9
+    line(120,120,150,210,getColor(x));
+
+     x=getRno();
+    a1.setTraffic(6,3,x);  //10
+    line(210,120,300,330,getColor(x));
+
+     x=getRno();
+    a1.setTraffic(8,13,x);  //11
+    line(180,390,90,510,getColor(x));
+
+     x=getRno();
+    a1.setTraffic(8,10,x);  //12
+    line(180,390,300,480,getColor(x));
+
+     x=getRno();
+    a1.setTraffic(8,9,x);  //13
+    line(180,390,420,390,getColor(x));
+
+     x=getRno();
+    a1.setTraffic(6,9,x);  //14
+    line(300,330,420,390,getColor(x));
+
+     x=getRno();
+    a1.setTraffic(9,10,x);  //15
+    line(420,390,300,480,getColor(x));
+
+     x=getRno();
+    a1.setTraffic(9,12,x);  //16
+    line(420,390,570,540,getColor(x));
+
+     x=getRno();
+    a1.setTraffic(11,1,x);  //17
+    line(420,480,60,270,getColor(x));
+
+     x=getRno();
+    a1.setTraffic(10,1,x);  //18
+    line(60,270,300,480,getColor(x));
+
+
+    dijkstra(a1, src, des);
+    System.out.println("Enter the vertex you choose");
+    src=s.nextInt();
+
+
+   }
   
-    dijkstra(a1, 1, 12);
+    
 
 	}
 
@@ -763,8 +852,23 @@ public static void character(char ch_dash, int x, int y, String col )
 		rn = rand.nextDouble();
 		int no = (int)(rn*10);
 		no = no %3 ; 
+    if(no==0)
+      return getRno();
+    else
+      return no;
 		//System.out.println(no+1);
-	
-        return no;   
+	   
+           
 	}
+
+  public static String getColor(int x)
+  {
+    switch(x)
+    {
+      case 1:return "GRY";
+      case 2:return "YLW";
+      case 3:return "RED";
+      default:return "GRY";
+    }
+  }
 }
