@@ -4,6 +4,7 @@ import java.io.*;
 
 //////////////////////
 //// Ghazz
+//   git@github.com:SumedhArani/Traffic-simulation.git
 /*
  Color codes for objects on the graph:
 
@@ -51,15 +52,21 @@ class trafficSimulation
     a1.insertEdge(9,12,210,3);  //16
     a1.insertEdge(11,12,150,3);  //17
     a1.insertEdge(10,11,120,2);  //18
+    a1.insertEdge(10,12,92,1);  //19 
 
     createGraph();
 
+  
+
     Scanner s=new Scanner(System.in);
     System.out.println("Enter the source vertex");
+   // circle(getx(src),gety(src),40,"BLK");
     int src = s.nextInt();
+    circle(getx(src),gety(src),40,"BLU");
     System.out.println("Enter your dstination");
     int des = s.nextInt();
     int x;
+    int src1=src;
 
     while(src!=des)
     {
@@ -128,20 +135,29 @@ class trafficSimulation
     line(420,390,570,540,getColor(x));
 
      x=getRno();
-    a1.setTraffic(11,1,x);  //17
-    line(420,480,60,270,getColor(x));
+    a1.setTraffic(11,12,x);  //17
+    line(480,420,570,540,getColor(x));
 
      x=getRno();
-    a1.setTraffic(10,1,x);  //18
-    line(60,270,300,480,getColor(x));
+    a1.setTraffic(10,11,x);  //18
+    line(300,480,480,420,getColor(x));
+
+    x=getRno();
+    a1.setTraffic(10,12,x);  //19
+    line(300,480,570,540,getColor(x));
 
 
     dijkstra(a1, src, des);
     System.out.println("Enter the vertex you choose");
+    circle(getx(src1),gety(src1),40,"BLK");
+    src1=src;
     src=s.nextInt();
+    circle(getx(src),gety(src),40,"BLU");
 
-
+    
    }
+   circle(getx(src1),gety(src1),40,"BLK");
+
   
     
 
@@ -236,8 +252,8 @@ class trafficSimulation
         y1=480;
         break;
       case 11:
-        x1=420;
-        y1=480;
+        x1=480;
+        y1=420;
         break;
       case 12:
         x1=570;
@@ -256,91 +272,91 @@ class trafficSimulation
       case 1:
         x2=60;
         y2=270;
-        line(x1,y1,x2,y2,"GRN");
+        line(x1,y1,x2,y2,"MGT");
         x1=x2;
         y1=y2;
         break;
       case 2:
         x2=120;
         y2=120;
-        line(x1,y1,x2,y2,"GRN");
+        line(x1,y1,x2,y2,"MGT");
         x1=x2;
         y1=y2;
         break;
       case 3:
         x2=210;
         y2=120;
-        line(x1,y1,x2,y2,"GRN");
+        line(x1,y1,x2,y2,"MGT");
         x1=x2;
         y1=y2;
         break;
       case 4:
         x2=330;
         y2=30;
-        line(x1,y1,x2,y2,"GRN");
+        line(x1,y1,x2,y2,"MGT");
         x1=x2;
         y1=y2;
         break;
       case 5:
         x2=450;
         y2=180;
-        line(x1,y1,x2,y2,"GRN");
+        line(x1,y1,x2,y2,"MGT");
         x1=x2;
         y1=y2;
         break;
       case 6:
         x2=300;
         y2=330;
-        line(x1,y1,x2,y2,"GRN");
+        line(x1,y1,x2,y2,"MGT");
         x1=x2;
         y1=y2;
         break;
       case 7:
         x2=150;
         y2=210;
-        line(x1,y1,x2,y2,"GRN");
+        line(x1,y1,x2,y2,"MGT");
         x1=x2;
         y1=y2;
         break;
       case 8:
         x2=180;
         y2=390;
-        line(x1,y1,x2,y2,"GRN");
+        line(x1,y1,x2,y2,"MGT");
         x1=x2;
         y1=y2;
         break;
       case 9:
         x2=420;
         y2=390;
-        line(x1,y1,x2,y2,"GRN");
+        line(x1,y1,x2,y2,"MGT");
         x1=x2;
         y1=y2;
         break;
       case 10:
         x2=300;
         y2=480;
-        line(x1,y1,x2,y2,"GRN");
+        line(x1,y1,x2,y2,"MGT");
         x1=x2;
         y1=y2;
         break;
       case 11:
-        x2=420;
-        y2=480;
-        line(x1,y1,x2,y2,"GRN");
+        x2=480;
+        y2=420;
+        line(x1,y1,x2,y2,"MGT");
         x1=x2;
         y1=y2;
         break;
       case 12:
         x2=570;
         y2=540;
-        line(x1,y1,x2,y2,"GRN");
+        line(x1,y1,x2,y2,"MGT");
         x1=x2;
         y1=y2;
         break;
       case 13:
         x2=90;
         y2=510;
-        line(x1,y1,x2,y2,"GRN");
+        line(x1,y1,x2,y2,"MGT");
         x1=x2;
         y1=y2;
         break;
@@ -441,8 +457,8 @@ class trafficSimulation
         y1=480;
         break;
       case 11:
-        x1=420;
-        y1=480;
+        x1=480;
+        y1=420;
         break;
       case 12:
         x1=570;
@@ -529,8 +545,8 @@ class trafficSimulation
         y1=y2;
         break;
       case 11:
-        x2=420;
-        y2=480;
+        x2=480;
+        y2=420;
         line(x1,y1,x2,y2,"BLU");
         x1=x2;
         y1=y2;
@@ -570,29 +586,29 @@ class trafficSimulation
       circle(300,480,40,"BLK");
       circle(450,180,40,"BLK");
       circle(420,390,40,"BLK");
-      circle(420,480,40,"BLK");
+      circle(480,420,40,"BLK");
       circle(570,540,40,"BLK");
 
 
-      line(60,270,120,120,"BLK");  //1
-      line(120,120,210,120,"BLK"); //2
-      line(210,120,330,30,"BLK");  //3
-      line(330,30,450,180,"BLK");  //4
-      line(450,180,300,330,"BLK");  //5
-      line(300,330,150,210,"BLK");  //6
-      line(150,210,180,390,"BLK");  //7
-      line(60,270,180,390,"BLK");  //8
-      line(120,120,150,210,"BLK");  //9
-      line(300,330,210,120,"BLK");  //10
-      line(180,390,90,510,"BLK");  //11
-      line(180,390,300,480,"BLK");  //12
-      line(180,390,420,390,"BLK");  //13
-      line(300,330,420,390,"BLK");  //14
-      line(420,390,300,480,"BLK");  //15
-      line(420,390,570,540,"BLK");  //16
-      line(420,480,570,540,"BLK");  //17
-      line(300,480,420,480,"BLK");  //18
-      //line(300,480,570,540,"BLK");  //19
+      line(60,270,120,120,"LGR");  //1
+      line(120,120,210,120,"LGR"); //2
+      line(210,120,330,30,"LGR");  //3
+      line(330,30,450,180,"LGR");  //4
+      line(450,180,300,330,"LGR");  //5
+      line(300,330,150,210,"LGR");  //6
+      line(150,210,180,390,"LGR");  //7
+      line(60,270,180,390,"LGR");  //8
+      line(120,120,150,210,"LGR");  //9
+      line(300,330,210,120,"LGR");  //10
+      line(180,390,90,510,"LGR");  //11
+      line(180,390,300,480,"LGR");  //12
+      line(180,390,420,390,"LGR");  //13
+      line(300,330,420,390,"LGR");  //14
+      line(420,390,300,480,"LGR");  //15
+      line(420,390,570,540,"LGR");  //16
+      line(480,420,570,540,"LGR");  //17
+      line(300,480,480,420,"LGR");  //18
+      line(300,480,570,540,"LGR");  //19
       
 
     }
@@ -630,7 +646,7 @@ class trafficSimulation
         temp = temp + (char)(((r%100)/10)+48);
         temp = temp +(char)((r%10)+48);
 
-        temp = temp + "_" + col + "     -----Ghazz Sumedh !!";
+        temp = temp + "_" + col;
     	
 
     	try
@@ -719,7 +735,7 @@ class trafficSimulation
         temp = temp +(char)((y2%10)+48);
 
         
-        temp = temp + "_" + col + "     -----Ghazz Sumedh !!";
+        temp = temp + "_" + col;
        
     	
 
@@ -728,9 +744,9 @@ class trafficSimulation
             fin = new BufferedReader(new FileReader("test.txt"));
               String ch;
              
-             System.out.println("#$#$%");
-             System.out.println(temp);
-             System.out.println(x1+" "+y1+" "+x2+" "+y2+" "+col+"\n");
+            // System.out.println("#$#$%");
+            // System.out.println(temp);
+             //System.out.println(x1+" "+y1+" "+x2+" "+y2+" "+col+"\n");
 
 
               ch = str = fin.readLine();
@@ -876,5 +892,128 @@ public static void character(char ch_dash, int x, int y, String col )
       case 3:return "RED";
       default:return "GRY";
     }
+  }
+
+  public static int getx(int s)
+  {
+    int x1;
+    switch(s)
+  {
+    case 1:
+        x1=60;
+        //y1=270;
+        return x1;
+      case 2:
+        x1=120;
+        //y1=120;
+        return x1;
+      case 3:
+        x1=210;
+        //y1=120;
+        return x1;
+      case 4:
+        x1=330;
+        //y1=30;
+        return x1;
+      case 5:
+        x1=450;
+        //y1=180;
+        return x1;
+      case 6:
+        x1=300;
+        //y1=330;
+        return x1;
+      case 7:
+        x1=150;
+        //y1=210;
+        return x1;
+      case 8:
+        x1=180;
+       // y1=390;
+        return x1;
+      case 9:
+        x1=420;
+        //y1=390;
+        return x1;
+      case 10:
+        x1=300;
+        //y1=480;
+        return x1;
+      case 11:
+        x1=480;
+        //y1=420;
+        return x1;
+      case 12:
+        x1=570;
+        //y1=540;
+        return x1;
+      case 13:
+        x1=90;
+        //y1=510;
+        return x1;
+      default:return 0;  
+  }
+  }
+
+  public static int gety(int s)
+  {
+    int y1;
+
+    switch(s)
+  {
+    case 1:
+        //x1=60;
+        y1=270;
+        return y1;
+      case 2:
+        //x1=120;
+        y1=120;
+        return y1;
+      case 3:
+        //x1=210;
+        y1=120;
+        return y1;
+      case 4:
+        //x1=330;
+        y1=30;
+        return y1;
+      case 5:
+        //x1=450;
+        y1=180;
+        return y1;
+      case 6:
+        //x1=300;
+        y1=330;
+        return y1;
+      case 7:
+        //x1=150;
+        y1=210;
+        return y1;
+      case 8:
+        //x1=180;
+        y1=390;
+        return y1;
+      case 9:
+        //x1=420;
+        y1=390;
+        return y1;
+      case 10:
+        //x1=300;
+        y1=480;
+        return y1;
+      case 11:
+       // x1=480;
+        y1=420;
+        return y1;
+      case 12:
+        //x1=570;
+        y1=540;
+        return y1;
+      case 13:
+       // x1=90;
+        y1=510;
+        return y1;
+      default: return 0;  
+  }
   }
 }
