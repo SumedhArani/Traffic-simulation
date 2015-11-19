@@ -728,6 +728,10 @@ class trafficSimulation
             fin = new BufferedReader(new FileReader("test.txt"));
               String ch;
              
+             System.out.println("#$#$%");
+             System.out.println(temp);
+             System.out.println(x1+" "+y1+" "+x2+" "+y2+" "+col+"\n");
+
 
               ch = str = fin.readLine();
 
@@ -765,6 +769,7 @@ class trafficSimulation
     	finally
 		{
 		    if(fout != null) fout.close();
+        // /if(fin != null) fin.close();
 		}
     }
 
