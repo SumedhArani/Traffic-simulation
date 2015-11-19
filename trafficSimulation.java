@@ -11,7 +11,7 @@ import java.io.*;
  Default path color : LIGHT_GRAY
 
  Shortest path : MAGENTA
- Fastest Path : GREEN
+ Fastest Path : BLUE
 
  low Traffic : GRAY
  moderate traffic : YELLOW
@@ -903,11 +903,8 @@ public static void character(char ch_dash, int x, int y, String col )
 
 		rn = rand.nextDouble();
 		int no = (int)(rn*10);
-		no = no %3 ; 
-    if(no==0)
-      return getRno();
-    else
-      return no;
+		no = no %3 ;
+    return no+1;
 		//System.out.println(no+1);
 	   
            
