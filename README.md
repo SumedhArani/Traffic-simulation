@@ -83,7 +83,7 @@ Parameter “col” specifies the color of the character to be displayed on the 
 
 All the function described above (circle, line, character) encodes the object data in the string. Then this string is appended into the file using file operations.
 
-
+        Credits
 Kudos to my team members!!
 =>Ghazzesh Kumar(Vidyasagar G)
 =>Taranesh Kumar(Tarun Nayani)
