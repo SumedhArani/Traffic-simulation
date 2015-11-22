@@ -23,6 +23,8 @@ A beautiful interface has been written for creating graphics for this project. T
 
 This concept is essentially how Google maps provides you directions and we run our program with essentially having two separate weights to calculate the shortest and fastest path. The two attributes we’ve used in our design is distance which remains constant and other is the traffic mode on the basis of which the speed is calculated. If the traffic is high, the denominator increases and hence the speed decreases which is then selected as the weight for the graph to find shortest path. There are many thousands of vertices and edges, and when you ask for directions you typically want the shortest or least expensive route to and from your destinations.
 
+The visual distances are the weights assigned to each edge i.e length of each edge is directly proportional to it's weight.
+
 
         Front End
 The front-end and the back-end are two different programs which are bridged by a file. Data from the back-end is dumped into the file. The file buffers all the data which comes from the back-end so that the front end accesses the file with ease and smooth file operations.
@@ -48,21 +50,6 @@ Where all the number must be in 3 digit format.
 Rectangular coordinate system: 
 Computer graphics usually has its origin at the top left corner of the screen. The program automatically converts the rectangular coordinates system data to computer coordinates system data.
 
-COLOR	CODES
-  Blue	BLU
-  Black	BLK
-  Red	RED
-  Yellow	YLW
-  Green	GRN
-  Cyan	CYN
-  Dark Gray	DGR
-  Gray	GRY
-  Light Gray	LGR
-  Magenta	MGT
-  Orange	ORG
-  Pink	PNK
-  White	WHT
-  
         Color codes:
 Default path color: LIGHT_GRAY
 Shortest path: MAGENTA
@@ -73,7 +60,8 @@ Heavy traffic: RED
 Nodes: Black
 Vehicle: BLUE
 
-About interfaces in “trafficSimulation.java” (back-end)
+        Back End
+About interfaces in “trafficSimulation.java” 
 All the functions take the data and creates an encoded string which contains data at specific locations which gives various attributes to the front-end program.
 Function “circle”:
 Prototype: public static void circle(int x, int y, int r, String col );
@@ -95,6 +83,10 @@ Parameter “col” specifies the color of the character to be displayed on the 
 
 All the function described above (circle, line, character) encodes the object data in the string. Then this string is appended into the file using file operations.
 
+
+Kudos to my team members!!
+=>Ghazzesh Kumar(Vidyasagar G)
+=>Taranesh Kumar(Tarun Nayani)
 
 
 
